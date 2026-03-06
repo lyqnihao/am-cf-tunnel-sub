@@ -135,8 +135,9 @@
 | 变量名 | 示例 | 必填 | 备注 | YT |
 |-----|-----|-----|-----|-----|
 | ID   | ec872d8f-72b0-4a04-b612-0327d85e18ed（默认）|✅| 订阅器的登录密码 | |
-| UUID | ec872d8f-72b0-4a04-b612-0327d85e18ed |✅| Cloudflare部署节点的ID变量值[在线获取UUID](https://1024tools.com/uuid)   |  |
-| HOST | vless.amclubss.com |✅| Cloudflare部署节点的域名或自定域名 | |
+| UUID | ec872d8f-72b0-4a04-b612-0327d85e18ed |✅| 支持多节点(多个之间`,`作间隔) Cloudflare部署节点的ID变量值[在线获取UUID](https://1024tools.com/uuid)   |  |
+| HOST | vless.amclubss.com |✅| 支持多节点(多个之间`,`作间隔) Cloudflare部署节点的域名或自定域名 | |
+| PROT_TYPE        | 默认空          |❌|  默认空,支持多节点(多个之间`,`作间隔) 就是生成vless和trojan节点，vless(只生成vless节点)，trojan(只生成trojan节点)           | [视频教程](https://www.youtube.com/watch?v=emEBm8Gw2wI&t=922s) |
 | IP_URL           | [https://raw.github.../ipUrl.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/ipUrl.txt) </br>或</br> [https://raw.github.../ipv4.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/ipv4.txt) |❌| （推荐）优选(ipv4、ipv6、域名、API)地址(支持多个之间`,`或 换行 作间隔)，支持文件连接后里带PROXYIP参数，可以实现不同区域优先IP使用不同的PROXYIP固定区域，解决IP乱跳问题  | [KV存储教程](https://youtu.be/dzxezRV1v-o)[GitHub存储教程](https://youtu.be/vX3U3FuuTT8)[使用教程](https://www.youtube.com/watch?v=4fcyJjstFdg&t=349s)|
 | PROXYIP          | proxyip.amclubs.kozow.com </br>或</br> [https://raw.github.../proxyip.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/proxyip.txt)  |❌| 访问CloudFlare的CDN代理节点(支持多PROXYIP, PROXYIP之间使用`,`或 换行 作间隔),支持端口设置默认443 如: proxyip.amclubs.kozow.com:2053 ，支持远程txt或csv文件| [视频教程](https://youtu.be/pKrlfRRB0gU) |
 | SOCKS5           | user:password@127.0.0.1:1080         |❌| 优先作为访问CFCDN站点的SOCKS5代理                                                   | [视频教程](https://youtu.be/Bw82BH_ecC4) |
@@ -144,7 +145,6 @@
 | NAT64_PREFIX  | 2602:fc59:b0:64::  </br>或</br> [https://raw.github.../nat64Prefix.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/nat64Prefix.txt)    |❌| 指定自定NAT64前缀,不填走CF默认的 (https://amclubss.com/public/)     | [视频教程](https://www.youtube.com/watch?v=nx80sGpVoBM&t=533s)|
 | SUB_CONFIG       | [https://raw.github.../ACL4SSR_Online_Mini.ini](https://raw.githubusercontent.com/amclubs/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌| clash、singbox等 订阅转换配置文件  ||
 | SUB_CONVERTER    | url.v1.mk                    |❌| clash、singbox等 订阅转换后端的api地址                               ||
-| PROT_TYPE        | 默认空          |❌|      默认空,就是生成vless和trojan节点，vless(只生成vless节点)，trojan(只生成trojan节点)           | [视频教程](https://www.youtube.com/watch?v=emEBm8Gw2wI&t=922s) |
 | NIP_HOST | 553558.xyz(默认) |❌| 优先IP时需要的nip服务 | |
 | EXTRA_IP | [https://raw.github.../ipv4.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/ipv4.txt) |❌| 优先IP时需要的nip服务 | |
 | EXTRA_IP_PROXY | [https://raw.github.../proxyip_am.txt](https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/example/proxyip_am.txt) |❌| 优先IP时需要的nip服务 | |
